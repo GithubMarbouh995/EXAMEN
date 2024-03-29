@@ -9,7 +9,7 @@
 
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://db-mysql-nyc3-45425-do-user-15838371-0.c.db.ondigitalocean.com:25060/defaultdb"/>
+            <property name="jakarta.persistence.jdbc.url" value=""/>
             <property name="jakarta.persistence.jdbc.user" value="doadmin"/>
             <property name="jakarta.persistence.jdbc.password" value=""/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
