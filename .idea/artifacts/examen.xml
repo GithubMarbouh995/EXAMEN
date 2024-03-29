@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="examen">
+    <output-path>$PROJECT_DIR$/out/artifacts/examen</output-path>
+    <root id="root" />
+  </artifact>
+</component>

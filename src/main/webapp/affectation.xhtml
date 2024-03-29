@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-BR"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<f:view>
+    <h:head>
+        <meta  content="" name="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <h:outputStylesheet library="webjars" name="bootstrap/5.3.3/css/bootstrap.min.css" />
+        <h:outputScript library="webjars" name="bootstrap/5.3.3/js/bootstrap.bundle.min.js" />
+        <h:outputStylesheet library="webjars" name="font-awesome/5.15.4/css/all.css" />
+        <h:form>
+            <h:selectOneMenu value="#{language.lang}" onchange="submit()" valueChangeListener="#{language.changeLanguage}">
+                <f:selectItem itemValue="en" itemLabel="English" />
+                <f:selectItem itemValue="fr" itemLabel="Français" />
+            </h:selectOneMenu>
+        </h:form>
+    </h:head>
+    <h:body >
+        <div class="container d-flex justify-content-center my-3">
+            <h:form >
+                <h:panelGroup styleClass="mb-3">
+                    <h:outputLabel styleClass="text-danger" rendered="#{contact.verification}" value="#{msg.alert}"/>
+                    <br/>
+                    <h:outputLabel  styleClass="form-label" value="Employe Name"/>
+                    <h:inputText styleClass="form-control" value="#{bean.name}" />
+                </h:panelGroup>
+                <h:panelGroup styleClass="form-floating">
+                    <h:inputTextarea id="floatingTextarea2" styleClass="form-control" style="height: 100px" value="#{bean.comments}" />
+                    <h:outputLabel for="floatingTextarea2" value="Project Name" />
+                </h:panelGroup>
+                <h:panelGroup styleClass="mb-3">
+                    <h:outputLabel styleClass="form-label" value="Implication"/>
+                    <h:inputText  styleClass="form-control" value="#{bean.phone}" />
+                </h:panelGroup>
+
+                <h:commandButton value="#{msg.action6}" styleClass="btn btn-primary mt-2 " action="Affecter projet" />
+            </h:form>
+        </div>
+
+    </h:body>
+</f:view>
+</html>
